@@ -21,3 +21,4 @@ closeBtn.addEventListener("click", () => {
   closeBtn.style.display = "none";
   menuBtn.style.display = "inline-block";
 });
+

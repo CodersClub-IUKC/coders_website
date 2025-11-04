@@ -89,6 +89,8 @@ img {
   color: var(--color-black);
   padding: 1rem 2rem;
   border: 1px solid transparent;
+  margin-top: 10px;
+  border-radius: 5px;
   font-weight: 500;
   transition: var(--transition);
 }
@@ -102,11 +104,22 @@ img {
 .btn-primary {
   background: var(--color-primary);
   color: var(--color-white);
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 /* ==================NAVBAR================ */
 nav {
-  background: transparent;
+  background: rgba(123, 193, 211, 0.9);
   width: 100%;
   height: 5rem;
   position: sticky;
@@ -124,6 +137,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: var(--color --primary);
 }
 
 nav button {
@@ -245,12 +259,21 @@ header {
   background: var(--color-bg1);
   text-align: center;
   border: 1px solid transparent;
+  border-radius: 10px;
+  height: 90%;
 }
 
 .project:hover {
   background: transparent;
   border-color: var(--color-primary);
   transition: var(--transition);
+}
+
+.project_image {
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .projects__info {
@@ -418,6 +441,11 @@ footer ul li a:hover {
     margin-right: 0;
   }
 
+  .categories__right {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   /* ==================PROJECTS================ */
   .projects {
     margin-top: 0;
@@ -458,7 +486,7 @@ footer ul li a:hover {
   }
 
   .categories__right {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0.7rem;
   }
   .category {
