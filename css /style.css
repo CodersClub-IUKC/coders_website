@@ -180,16 +180,59 @@ header {
   margin-top: 5rem;
 }
 
-.header__container {
+/* .header__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 5rem;
   height: 100%;
+} */
+
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 80vh;
+  padding: 4rem 0;
 }
 
-.header__left p {
+
+/* .header__left p {
   margin: 1rem 0 2.4rem;
+} */
+
+.header__left p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: var(--color-light);
+  max-width: 90%;
+}
+
+.header__left h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__right-image {
+  text-align: center;
+}
+
+.header__right-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  transition: transform 300ms ease;
+}
+.header__right-image:hover img {
+  transform: scale(1.02);
 }
 
 /* ==================CATEGORIES================ */
@@ -214,6 +257,16 @@ header {
 
 .categories__left p {
   margin: 1rem 0 3rem;
+  line-height: 1.8;
+  color: var(--color-light);
+}
+
+.categories__left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .categories__right {
@@ -240,18 +293,56 @@ header {
 .category:nth-child(3) .category__icon {
   background: #f7c94b;
 }
-.category__icon {
+/* .category__icon {
   background: var(--color-primary);
   padding: 0.7rem;
   border-radius: 0.9rem;
+} */
+.category__icon {
+  background: var(--color-primary);
+  padding: 0.8rem;
+  border-radius: 0.9rem;
+  display: inline-flex;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
+
+/* .category h5 {
+  margin: 2rem 0 1rem;
+} */
 
 .category h5 {
-  margin: 2rem 0 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
 }
 
-.category p {
+/* .category p {
   font-size: 0.85rem;
+} */
+
+.category p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-light);
+}
+
+/* new for this section */
+.categories__left .btn {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-white);
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 2rem;
+  transition: all 300ms ease;
+  font-weight: 500;
+}
+
+.categories__left .btn:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* ==================PROJECTS================ */
@@ -361,7 +452,7 @@ footer ul li a:hover {
   h4 {
     font-size: 1.2rem;
   }
-  /* ==================NAVBAR================ */
+/* ==================NAVBAR================ */
   nav button {
     display: inline-block;
     background: transparent;
@@ -388,29 +479,6 @@ footer ul li a:hover {
   .nav__menu li {
     width: 100%;
     height: 5.8rem;
-    animation: animateNavMenu 400ms linear forwards;
-    transform-origin: top right;
-    opacity: 0;
-  }
-
-  .nav__menu li :nth-child(2) {
-    animation-delay: 200ms;
-  }
-  .nav__menu li :nth-child(3) {
-    animation-delay: 400ms;
-  }
-  .nav__menu li :nth-child(4) {
-    animation-delay: 600ms;
-  }
-
-  @keyframes animateNavMenu {
-    0% {
-      transform: rotate(-90deg) rotateX(90deg) scale(1);
-    }
-    100% {
-      transform: rotate(0) rotateX(0) scale(1);
-      opacity: 1;
-    }
   }
 
   .nav__menu li a {
@@ -427,8 +495,9 @@ footer ul li a:hover {
     color: var(--color-white);
   }
 
+
   /* ==================HEADER================ */
-  header {
+  /* header {
     height: 52vh;
     margin-top: 4rem;
   }
@@ -436,7 +505,33 @@ footer ul li a:hover {
   .header__container {
     gap: 0;
     padding-bottom: 3rem;
-  }
+  } */
+
+  .header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.header__left h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__left p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: var(--color-light);
+  max-width: 90%;
+}
 
   /* ==================CATEGORIES================ */
   .categories {

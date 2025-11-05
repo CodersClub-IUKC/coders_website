@@ -11,14 +11,14 @@ const closeBtn = document.querySelector("#close-menu-btn");
 
 menuBtn.addEventListener("click", () => {
   menu.style.display = "flex";
+  menu.classList.add("show-menu"); // Add this line
   closeBtn.style.display = "inline-block";
   menuBtn.style.display = "none";
 });
 
-// close nav menu
 closeBtn.addEventListener("click", () => {
   menu.style.display = "none";
+  menu.classList.remove("show-menu"); // Add this line
   closeBtn.style.display = "none";
   menuBtn.style.display = "inline-block";
 });
-
