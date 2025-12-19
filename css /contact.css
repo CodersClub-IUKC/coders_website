@@ -120,9 +120,9 @@ img {
   transition: all 0.3s ease;
 }
 
-
+/* ==================NAVBAR================ */
 nav {
-  background: rgba(123, 193, 211, 0.9);
+  background: #3f468bff;
   width: 100%;
   height: 5rem;
   position: sticky;
@@ -163,7 +163,7 @@ nav button {
 .nav__menu a {
   font-size:1.05rem;
   transition: var(--transition);
-  font-weight:500;
+  font-weight:400;
 }
 
 .nav__menu a:hover {
@@ -171,6 +171,40 @@ nav button {
 }
 
 /* ==================HEADER================ */
+
+header {
+  position: relative;
+  top: 5rem;
+  overflow: hidden:
+  height: 70vh;
+  margin-top: 5rem;
+}
+
+.header__container {
+  display: grid:
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 80vh;
+  padding: 4rem  0;
+
+}
+
+.header__left p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: var(--color-light);
+  max-width: 90%;
+}
+
+.header__left h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color:var(--color-white)
+}
 
 /* ==================CONTACT PAGE================ */
 .contact__header {
@@ -369,6 +403,208 @@ nav button {
   color: var(--color-white);
 }
 
+/* ==================FOOTER================ */
+
+footer {
+  background: var(--color-bg1);
+  padding-top: 5rem;
+  font-size: 0.9rem;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+
+.footer__container > div h4 {
+  margin-bottom: 1.2rem;
+}
+
+.footer__1 p {
+  margin-bottom: 0 0 2rem;
+}
+
+footer ul li {
+  margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+.footer__socials a:hover {
+  color: var(--color-primary);
+}
+
+.footer__copyright {
+  text-align: center;
+  margin-top: 4rem;
+  border-top: 1px solid var(--color-bg2);
+  padding: 1.2rem 0;
+}
+
+
+/* ==================MEDIA QUERIES================ */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+/* ==================NAVBAR================ */
+  nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  nav button#close-menu-btn {
+    display: none;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav__menu li {
+    width: 100%;
+    height: 5.8rem;
+  }
+
+  .nav__menu li a {
+    background: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .nav__menu li a:hover {
+    background: var(--color-bg2);
+    color: var(--color-white);
+  }
+
+
+  /* ==================HEADER================ */
+  /* header {
+    height: 52vh;
+    margin-top: 4rem;
+  }
+
+  .header__container {
+    gap: 0;
+    padding-bottom: 3rem;
+  } */
+
+  .header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.header__left h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.header__left p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: var(--color-light);
+  max-width: 90%;
+}
+
+  /* ==================CATEGORIES================ */
+  .categories {
+    /* height: auto; */
+    min-height:auto;
+    padding: 3rem 0;
+    flex-direction:column;
+  
+  }
+
+  .categories__container {
+    /* grid-template-columns: 1fr; */
+    flex-direction:column;
+    gap: 2rem;
+  }
+
+  .categories__left {
+    margin-right: 0;
+  }
+
+    .categories__left p{
+    text-align:center;
+  }
+
+    .categories__left a{
+    margin-left: 2rem;
+  }
+
+  .categories__right {
+    /* grid-template-columns: 1fr; */
+     flex-direction:column;
+    gap: 1rem;
+  }
+
+  /* ==================PROJECTS================ */
+  .projects {
+    /* margin-top: 0; */
+    padding:1rem;
+  }
+  .projects h2{
+      margin-bottom:2rem;
+  }
+
+  .projects__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .project_image{
+    height:200px;
+  }
+  .projects__info{
+    padding:1rem 1rem 1.5rem;
+  }
+
+  /* ==================FOOTER================ */
+  .footer__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 /* ==================MEDIA QUERIES (PHONES)================ */
 @media screen and (max-width: 600px) {
