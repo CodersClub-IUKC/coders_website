@@ -3,78 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coders Club</title>
+    <title>Contact — Coders Club</title>
+    <meta name="description" content="Get in touch with Coders Club. Join our community, propose a project collaboration, or ask about upcoming workshops at IUIU-KC, Kampala." />
+    <meta property="og:title" content="Contact — Coders Club" />
+    <meta property="og:description" content="Ready to code with us? Reach out, join a meetup, or start building your next project with Coders Club." />
+    <meta property="og:image" content="./images/CoderLogo.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="./images/CoderLogo.png" />
 
-    <!--ICON SCOUT CDN-->
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"
-    />
-
-    <!--GOOGLE FONT-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!--CUSTOM STYLESHEET-->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css /contact.css" />
   </head>
   <body>
+
+    <!-- NAV -->
     <nav>
       <div class="container nav__container">
-        <a href="index.html"><h4 class="logo">CODERS CLUB</h4></a>
+        <a href="index.html" class="nav__brand">
+          <img src="./images/CoderLogo.png" alt="Coders Club" class="nav__logo-img" />
+          <span class="logo">CODERS CLUB</span>
+        </a>
         <ul class="nav__menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
+        <a href="contact.html" class="nav__cta">Join Free →</a>
         <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
         <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
       </div>
     </nav>
-    <!--==================END OF NAV===========================-->
+
+    <!-- PAGE HEADER -->
     <section class="contact__header">
       <div class="container">
+        <div class="page-header__badge"><i class="uil uil-envelope-alt"></i> Reach Out</div>
         <h1>Get In Touch</h1>
         <p>Ready to code with us? We'd love to hear from you</p>
       </div>
     </section>
 
+    <!-- CONTACT MAIN -->
     <section class="contact__main">
       <div class="container contact__container">
-        <div class="contact__info">
+        <div class="contact__info reveal">
           <h2>Let's Connect</h2>
-          <p>
-            Whether you're a beginner looking to learn or an experienced
-            developer wanting to collaborate, we welcome you to our community.
-          </p>
+          <p>Whether you're a beginner looking to learn or an experienced developer wanting to collaborate, we welcome everyone to our community. Reach out and let's build something together.</p>
 
           <div class="contact__methods">
             <div class="contact__method">
-              <span class="contact__icon">📧</span>
+              <span class="contact__icon"><i class="uil uil-envelope"></i></span>
               <div>
                 <h4>Email Us</h4>
                 <p>codersclub256@gmail.com</p>
               </div>
             </div>
-
             <div class="contact__method">
-              <span class="contact__icon">📱</span>
+              <span class="contact__icon"><i class="uil uil-phone"></i></span>
               <div>
                 <h4>Call Us</h4>
                 <p>+256-702 973946</p>
               </div>
             </div>
-
             <div class="contact__method">
-              <span class="contact__icon">📍</span>
+              <span class="contact__icon"><i class="uil uil-map-marker"></i></span>
               <div>
                 <h4>Visit Us</h4>
+<<<<<<< HEAD
                 <p>UIUI-KC<br />Kampala, Uganda</p>
+=======
+                <p>IUIU-KC, Kampala, Uganda</p>
+>>>>>>> 2581704 (Improved desigin.)
               </div>
             </div>
           </div>
@@ -82,84 +86,77 @@
           <div class="social-links">
             <h4>Follow Our Journey</h4>
             <div class="social__icons">
-              <a href="#"><i class="uil uil-facebook-f"></i></a>
-              <a href="#"><i class="uil uil-twitter"></i></a>
-              <a href="#"><i class="uil uil-instagram"></i></a>
-              <a href="#"><i class="uil uil-linkedin-alt"></i></a>
-              <a href="#"><i class="uil uil-github"></i></a>
+              <a href="#" aria-label="Facebook"><i class="uil uil-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="uil uil-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="uil uil-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a>
+              <a href="#" aria-label="GitHub"><i class="uil uil-github"></i></a>
             </div>
           </div>
         </div>
 
-        <div class="contact__form">
-          <form>
+        <div class="contact__form reveal">
+          <form id="contact-form">
             <div class="form__group">
               <label for="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                required
-              />
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+              <span class="form__error-msg">Please enter your full name.</span>
             </div>
-
             <div class="form__group">
               <label for="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-              />
+              <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+              <span class="form__error-msg">Please enter a valid email address.</span>
             </div>
-
             <div class="form__group">
               <label for="subject">Subject</label>
-              <select id="subject" required>
+              <select id="subject" name="subject" required>
                 <option value="">Select a topic</option>
                 <option value="membership">Membership Inquiry</option>
                 <option value="collaboration">Project Collaboration</option>
                 <option value="workshop">Workshop Information</option>
+                <option value="mentorship">Mentorship Request</option>
                 <option value="other">Other</option>
               </select>
+              <span class="form__error-msg">Please select a topic.</span>
             </div>
-
             <div class="form__group">
               <label for="message">Message</label>
-              <textarea
-                id="message"
-                rows="5"
-                placeholder="Tell us about your inquiry..."
-                required
-              ></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your inquiry or idea..." required></textarea>
+              <span class="form__error-msg">Please enter your message (min 10 characters).</span>
             </div>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn-primary">Send Message</button>
           </form>
+          <div class="form__success" id="form-success">
+            <i class="uil uil-check-circle"></i>
+            <h4>Message Sent!</h4>
+            <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- MEETING INFO -->
     <section class="meeting__info">
       <div class="container">
         <h2>Weekly Meetups</h2>
         <div class="meeting__schedule">
-          <div class="meeting__day">
-            <h4>🕒 Every Wednesday</h4>
-            <p><strong>Time:</strong> 4:00 PM - 6:00 PM</p>
+          <div class="meeting__day reveal">
+            <h4>🕓 Every Wednesday</h4>
+            <p><strong>Time:</strong> 4:00 PM — 6:00 PM</p>
             <p><strong>Location:</strong> Computer Lab 2, Main Campus</p>
-            <p><strong>Focus:</strong> Project Collaborations & Code Reviews</p>
+            <p><strong>Focus:</strong> Project Collaborations &amp; Code Reviews</p>
           </div>
-          <div class="meeting__day">
-            <h4>🕒 Every Saturday</h4>
-            <p><strong>Time:</strong> 10:00 AM - 1:00 PM</p>
-            <p><strong>Location:</strong> Innovation Hub</p>
-            <p><strong>Focus:</strong> Workshops & Learning Sessions</p>
+          <div class="meeting__day reveal">
+            <h4>🕙 Every Saturday</h4>
+            <p><strong>Time:</strong> 10:00 AM — 1:00 PM</p>
+            <p><strong>Location:</strong> Innovation Hub, IUIU-KC</p>
+            <p><strong>Focus:</strong> Workshops &amp; Learning Sessions</p>
           </div>
         </div>
       </div>
     </section>
 
+<<<<<<< HEAD
     <footer >
       <div class="container footer__container">
         <div class="footer__1">
@@ -172,12 +169,28 @@
         <div class="footer__2">
           <h4>Permalinks</h4>
           <ul class="permalinks">
+=======
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer__container">
+        <div class="footer__1">
+          <a href="index.html" class="footer__brand">
+            <img src="./images/CoderLogo.png" alt="Coders Club" class="footer__logo-img" loading="lazy" />
+            <span class="footer__logo">CODERS CLUB</span>
+          </a>
+          <p>A community of passionate developers building the future, one line of code at a time. Based at IUIU-KC, Kampala, Uganda.</p>
+        </div>
+        <div class="footer__2">
+          <h4>Quick Links</h4>
+          <ul>
+>>>>>>> 2581704 (Improved desigin.)
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+<<<<<<< HEAD
 
         <div class="footer__3">
           <h4>Privacy</h4>
@@ -222,5 +235,40 @@
       </div>
     </footer>
         <script src="./main.js"></script>
+=======
+        <div class="footer__3">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Code of Conduct</a></li>
+          </ul>
+        </div>
+        <div class="footer__4">
+          <h4>Connect</h4>
+          <div class="contact-details">
+            <p>+256-702 973946</p>
+            <p>codersclub256@gmail.com</p>
+          </div>
+          <ul class="footer__socials">
+            <li><a href="#" aria-label="Facebook"><i class="uil uil-facebook-f"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="uil uil-instagram"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="uil uil-twitter"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a></li>
+            <li><a href="#" aria-label="GitHub"><i class="uil uil-github"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <small>Copyright &copy; 2025 Coders Club. All Rights Reserved.</small>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+      <i class="uil uil-arrow-up"></i>
+    </button>
+
+    <script src="./main.js"></script>
+>>>>>>> 2581704 (Improved desigin.)
   </body>
 </html>

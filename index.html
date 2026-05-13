@@ -3,207 +3,393 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coders Club</title>
+    <title>Coders Club — Build the Future</title>
+    <meta name="description" content="Coders Club is a community of passionate developers at IUIU-KC, Kampala. We learn, build, and innovate together — from beginners to experts." />
+    <meta property="og:title" content="Coders Club — Build the Future" />
+    <meta property="og:description" content="Join a thriving developer community. Build real projects, attend workshops, and grow your skills with 500+ members." />
+    <meta property="og:image" content="./images/CoderLogo.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="./images/CoderLogo.png" />
 
-    <!--ICON SCOUT CDN-->
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"
-    />
-
-    <!--GOOGLE FONT-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!--CUSTOM STYLESHEET-->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css /style.css" />
   </head>
   <body>
+
+    <!-- NAV -->
     <nav>
       <div class="container nav__container">
-        <a href="index.html"><h4 class="logo">CODERS CLUB</h4></a>
+        <a href="index.html" class="nav__brand">
+          <img src="./images/CoderLogo.png" alt="Coders Club" class="nav__logo-img" />
+          <span class="logo">CODERS CLUB</span>
+        </a>
         <ul class="nav__menu">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <a href="contact.html" class="nav__cta">Join Free →</a>
         <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
         <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
       </div>
     </nav>
-    <!--==================END OF NAV===========================-->
 
-    <head>
+    <!-- HERO -->
+    <header>
       <div class="container header__container">
         <div class="header__left">
-          <h1>Future is written in code</h1>
-          <p>
-            Join a community of passionate developers. From beginners to experts, we learn, build, and innovate together. Your next breakthrough starts here.
-          </p>
-          <a href="projects.html" class="btn btn-primary">Explore</a>
+          <div class="header__tag">
+            <span class="dot"></span>
+            <span>Open to new members — Join free</span>
+          </div>
+          <h1>Future is written<br>in <span class="gradient-word" id="typed-word">code</span><span class="typing-cursor"></span></h1>
+          <p>Join a community of passionate developers. From beginners to experts, we learn, build, and innovate together. Your next breakthrough starts here.</p>
+          <div class="header__buttons">
+            <a href="contact.html" class="btn-primary">Join Us Today</a>
+            <a href="projects.html" class="btn-outline">View Projects</a>
+          </div>
         </div>
+
         <div class="header__right">
-          <div class="header__right-image">
-            <img src="./images/CoderLogo.png" />
+          <div class="code-window">
+            <div class="code-window__header">
+              <span class="code-window__dot"></span>
+              <span class="code-window__dot"></span>
+              <span class="code-window__dot"></span>
+              <span class="code-window__title">welcome.js</span>
+            </div>
+            <div class="code-window__body">
+              <div class="code-line"><span class="code-line-num">1</span><span><span class="code-keyword">const</span> <span class="code-var">coder</span> <span class="code-operator">=</span> {</span></div>
+              <div class="code-line"><span class="code-line-num">2</span><span>&nbsp;&nbsp;<span class="code-var">name</span>: <span class="code-string">"You"</span>,</span></div>
+              <div class="code-line"><span class="code-line-num">3</span><span>&nbsp;&nbsp;<span class="code-var">level</span>: <span class="code-string">"Unlimited"</span>,</span></div>
+              <div class="code-line"><span class="code-line-num">4</span><span>&nbsp;&nbsp;<span class="code-var">community</span>: <span class="code-string">"Coders Club"</span>,</span></div>
+              <div class="code-line"><span class="code-line-num">5</span><span>&nbsp;&nbsp;<span class="code-var">skills</span>: [<span class="code-string">"React"</span>, <span class="code-string">"Python"</span>,</span></div>
+              <div class="code-line"><span class="code-line-num">6</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"Node.js"</span>, <span class="code-string">"Flutter"</span>]</span></div>
+              <div class="code-line"><span class="code-line-num">7</span><span>};</span></div>
+              <div class="code-line"><span class="code-line-num">8</span><span></span></div>
+              <div class="code-line"><span class="code-line-num">9</span><span><span class="code-keyword">function</span> <span class="code-function">buildFuture</span>(<span class="code-var">dev</span>) {</span></div>
+              <div class="code-line"><span class="code-line-num">10</span><span>&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-string">`Welcome, ${<span class="code-var">dev</span>.<span class="code-var">name</span>}!`</span>;</span></div>
+              <div class="code-line"><span class="code-line-num">11</span><span>}</span></div>
+              <div class="code-line"><span class="code-line-num">12</span><span></span></div>
+              <div class="code-line"><span class="code-line-num">13</span><span><span class="code-comment">// Output: "Welcome, You!"</span></span></div>
+              <div class="code-line"><span class="code-line-num">14</span><span><span class="code-function">buildFuture</span>(<span class="code-var">coder</span>); <span class="code-comment">// ✓</span></span></div>
+            </div>
           </div>
         </div>
       </div>
-    </head>
-    <!--==================END OF HEADER===========================-->
+    </header>
 
+    <!-- STATS -->
+    <section class="stats">
+      <div class="container stats__container">
+        <div class="stat__item reveal">
+          <h3 class="counter" data-target="500">0</h3>
+          <p>Active Members</p>
+        </div>
+        <div class="stat__item reveal">
+          <h3 class="counter" data-target="100">0</h3>
+          <p>Projects Built</p>
+        </div>
+        <div class="stat__item reveal">
+          <h3 class="counter" data-target="50">0</h3>
+          <p>Workshops Hosted</p>
+        </div>
+        <div class="stat__item reveal">
+          <h3 class="counter" data-target="5">0</h3>
+          <p>Years Running</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING EVENTS -->
+    <section class="events">
+      <div class="container">
+        <div class="section__title reveal">
+          <h2>Upcoming Events</h2>
+          <p>Join us for workshops, hackathons, and weekly meetups</p>
+        </div>
+        <div class="events__grid">
+          <article class="event__card reveal">
+            <div class="event__date">
+              <span class="event__day">21</span>
+              <span class="event__month">May</span>
+            </div>
+            <div class="event__info">
+              <span class="event__badge web">Workshop</span>
+              <h4>React + TypeScript Deep Dive</h4>
+              <p>Build type-safe React apps from scratch. Covers hooks, generics, and real project patterns.</p>
+              <div class="event__meta">
+                <span><i class="uil uil-clock"></i> 10:00 AM — 1:00 PM</span>
+                <span><i class="uil uil-map-marker"></i> Innovation Hub, IUIU-KC</span>
+              </div>
+            </div>
+          </article>
+          <article class="event__card reveal">
+            <div class="event__date">
+              <span class="event__day">28</span>
+              <span class="event__month">May</span>
+            </div>
+            <div class="event__info">
+              <span class="event__badge mobile">Hackathon</span>
+              <h4>48-Hour Build Challenge</h4>
+              <p>Form teams, pick a problem, and ship a working product in 48 hours. Prizes for top 3 teams.</p>
+              <div class="event__meta">
+                <span><i class="uil uil-clock"></i> Fri 6 PM — Sun 6 PM</span>
+                <span><i class="uil uil-map-marker"></i> Computer Lab 2, Main Campus</span>
+              </div>
+            </div>
+          </article>
+          <article class="event__card reveal">
+            <div class="event__date">
+              <span class="event__day">04</span>
+              <span class="event__month">Jun</span>
+            </div>
+            <div class="event__info">
+              <span class="event__badge desktop">Meetup</span>
+              <h4>Weekly Code Review & Collaboration</h4>
+              <p>Bring your project, share your progress, get feedback from peers and mentors.</p>
+              <div class="event__meta">
+                <span><i class="uil uil-clock"></i> 4:00 PM — 6:00 PM</span>
+                <span><i class="uil uil-map-marker"></i> Computer Lab 2, Main Campus</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem;">
+          <a href="contact.html" class="btn-outline">View All Events</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIALITIES -->
     <section class="categories">
       <div class="container categories__container">
-        <div class="categories__left">
-          <h1>Specialities</h1>
-          <p>
-            We explore the full spectrum of development, mastering the tools and frameworks that power the modern digital world. From front-end interfaces to robust back-end systems, we build it all.
-          </p>
-          <a href="#" class="btn">Learn More</a>
+        <div class="categories__left reveal">
+          <h2>Our <span>Specialities</span></h2>
+          <p>We explore the full spectrum of development, mastering the tools and frameworks that power the modern digital world. From front-end interfaces to robust back-end systems, we build it all.</p>
+          <a href="about.html" class="btn-outline">Learn More</a>
         </div>
         <div class="categories__right">
-          <article class="category">
-            <span class="category__icon"
-              ><i class="uil uil-brackets-curly"></i
-            ></span>
-            <h5>Web Development</h5>
-            <p>
-              Master the art of creating dynamic, responsive, and interactive websites. Our projects range from sleek portfolios and business sites to complex full-stack applications using modern frameworks like React, Vue, and Node.js.
-            </p>
+          <article class="category reveal">
+            <span class="category__icon"><i class="uil uil-brackets-curly"></i></span>
+            <div class="category__text">
+              <h5>Web Development</h5>
+              <p>Master creating dynamic, responsive websites. From sleek portfolios to complex full-stack apps using React, Vue, and Node.js.</p>
+            </div>
           </article>
-          <article class="category">
-            <span class="category__icon"
-              ><i class="uil uil-mobile-android-alt"></i
-            ></span>
-            <h5>Mobile Development</h5>
-            <p>
-              Build applications for a world on the go. We develop for both iOS and Android platforms, learning native tools like Swift and Kotlin, or leveraging cross-platform solutions like Flutter and React Native to reach millions of users.
-            </p>
+          <article class="category reveal">
+            <span class="category__icon"><i class="uil uil-mobile-android-alt"></i></span>
+            <div class="category__text">
+              <h5>Mobile Development</h5>
+              <p>Build apps for iOS and Android. We use Flutter, React Native, and native tools like Swift and Kotlin to reach millions.</p>
+            </div>
           </article>
-          <article class="category">
+          <article class="category reveal">
             <span class="category__icon"><i class="uil uil-desktop"></i></span>
-            <h5>Desktop Application</h5>
-            <p>
-              Engineer powerful, native software for Windows, macOS, and Linux. Tackle performance-intensive tasks and create professional tools using technologies like Electron, .NET MAUI, and JavaFX.
-            </p>
+            <div class="category__text">
+              <h5>Desktop Applications</h5>
+              <p>Engineer powerful software for Windows, macOS, and Linux using Electron, .NET MAUI, and JavaFX.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
-    <!--==================END OF CATEGORIES===========================-->
 
-    <section class="projects">
-      <h2>Our Projects</h2>
-      <div class="container projects__container">
-                <article class="project">
-          <div class="project__image">
-            <img src="./images/nexus.jpg" alt="nexus" />
-          </div>
-          <div class="projects__info">
-            <h4>Campus Nexus</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-              fugiat repellat tempora aliquam! Debitis, ad doloremque.
-            </p>
-            <a href="projects.html" class="btn">Learn More</a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project__image">
-            <img src="./images/pos.jpg" alt="POS" />
-          </div>
-          <div class="projects__info">
-            <h4>Restaurant Point Of sale</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-              fugiat repellat tempora aliquam! Debitis, ad doloremque.
-            </p>
-            <a href="projects.html" class="btn">Learn More</a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project__image">
-            <img src="./images/pos.jpg" alt="POS" />
-          </div>
-          <div class="projects__info">
-            <h4>Restaurant Point Of sale</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-              fugiat repellat tempora aliquam! Debitis, ad doloremque.
-            </p>
-            <a href="projects.html" class="btn">Learn More</a>
-          </div>
-        </article>
-
+    <!-- TECH STACK -->
+    <section class="tech-stack">
+      <div class="container">
+        <div class="section__title reveal">
+          <h2>Technologies We Use</h2>
+          <p>From frontend to backend, mobile to cloud — we work with the tools that matter</p>
+        </div>
+      </div>
+      <div class="tech__marquee">
+        <div class="tech__track">
+          <div class="tech__item">⚛️ React</div>
+          <div class="tech__item">🟢 Node.js</div>
+          <div class="tech__item">🐍 Python</div>
+          <div class="tech__item">📱 Flutter</div>
+          <div class="tech__item">☕ Java</div>
+          <div class="tech__item">🍃 MongoDB</div>
+          <div class="tech__item">🐘 PostgreSQL</div>
+          <div class="tech__item">🔥 Firebase</div>
+          <div class="tech__item">⚡ TypeScript</div>
+          <div class="tech__item">🐳 Docker</div>
+          <div class="tech__item">☁️ AWS</div>
+          <div class="tech__item">🦀 Rust</div>
+          <div class="tech__item">🅰️ Angular</div>
+          <div class="tech__item">🐧 Linux</div>
+          <div class="tech__item">🔷 GraphQL</div>
+          <div class="tech__item">🟣 Kotlin</div>
+          <!-- duplicate set for seamless loop -->
+          <div class="tech__item">⚛️ React</div>
+          <div class="tech__item">🟢 Node.js</div>
+          <div class="tech__item">🐍 Python</div>
+          <div class="tech__item">📱 Flutter</div>
+          <div class="tech__item">☕ Java</div>
+          <div class="tech__item">🍃 MongoDB</div>
+          <div class="tech__item">🐘 PostgreSQL</div>
+          <div class="tech__item">🔥 Firebase</div>
+          <div class="tech__item">⚡ TypeScript</div>
+          <div class="tech__item">🐳 Docker</div>
+          <div class="tech__item">☁️ AWS</div>
+          <div class="tech__item">🦀 Rust</div>
+          <div class="tech__item">🅰️ Angular</div>
+          <div class="tech__item">🐧 Linux</div>
+          <div class="tech__item">🔷 GraphQL</div>
+          <div class="tech__item">🟣 Kotlin</div>
+        </div>
       </div>
     </section>
-    <!--==================END OF PROJECTS===========================-->
 
-    <footer >
+    <!-- PROJECTS -->
+    <section class="projects">
+      <div class="container">
+        <div class="section__title reveal">
+          <h2>Our Projects</h2>
+          <p>Real solutions built by our community for real-world challenges</p>
+        </div>
+        <div class="projects__container">
+          <article class="project reveal">
+            <div class="project__image">
+              <img src="./images/nexus.jpg" loading="lazy" alt="Campus Nexus" />
+            </div>
+            <div class="projects__info">
+              <h4>Campus Nexus</h4>
+              <p>A comprehensive campus management system connecting students, faculty, and administration through a unified digital platform.</p>
+              <a href="projects.html" class="btn">Learn More</a>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project__image">
+              <img src="./images/pos.jpg" loading="lazy" alt="Restaurant POS" />
+            </div>
+            <div class="projects__info">
+              <h4>Restaurant POS System</h4>
+              <p>Point of Sale system with offline capability and cloud sync, optimized for tablets and mobile devices in fast-paced environments.</p>
+              <a href="projects.html" class="btn">Learn More</a>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project__image project__image--placeholder">
+              <div class="project__placeholder">
+                <i class="uil uil-laptop-cloud"></i>
+                <span>Asset Manager</span>
+              </div>
+            </div>
+            <div class="projects__info">
+              <h4>Asset Management System</h4>
+              <p>Enterprise-level asset tracking and management software with barcode integration and real-time reporting dashboards.</p>
+              <a href="projects.html" class="btn">Learn More</a>
+            </div>
+          </article>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="projects.html" class="btn-primary">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section__title reveal">
+          <h2>What Our Members Say</h2>
+          <p>Real words from the developers who call Coders Club home</p>
+        </div>
+        <div class="testimonials__grid">
+          <article class="testimonial reveal">
+            <div class="testimonial__quote"><i class="uil uil-quote-left"></i></div>
+            <p>"Joining Coders Club was a turning point. I went from writing basic HTML to shipping a full-stack app within 6 months. The mentorship here is real."</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar" style="--av-color:#00d4ff">AK</div>
+              <div>
+                <h5>Aisha Kamau</h5>
+                <span>Web Developer — Year 2</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial reveal">
+            <div class="testimonial__quote"><i class="uil uil-quote-left"></i></div>
+            <p>"The collaborative energy here is unmatched. We built a full Restaurant POS system as a team and I learned more in those 3 months than in a year of solo study."</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar" style="--av-color:#7c3aed">BM</div>
+              <div>
+                <h5>Brian Mugisha</h5>
+                <span>Mobile Developer — Year 3</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial reveal">
+            <div class="testimonial__quote"><i class="uil uil-quote-left"></i></div>
+            <p>"I came in nervous with zero experience. The beginner-friendly workshops made everything click. Now I'm contributing to production projects. Best decision I made."</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar" style="--av-color:#00ff88">FN</div>
+              <div>
+                <h5>Fatuma Nakato</h5>
+                <span>Frontend Dev — Year 1</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
       <div class="container footer__container">
         <div class="footer__1">
-          <a href="index.html" class="footer__logo"><h4>CODERS CLUB</h4></a>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, cum.
-          </p>
+          <a href="index.html" class="footer__brand">
+            <img src="./images/CoderLogo.png" alt="Coders Club" class="footer__logo-img" loading="lazy" />
+            <span class="footer__logo">CODERS CLUB</span>
+          </a>
+          <p>A community of passionate developers building the future, one line of code at a time. Based at IUIU-KC, Kampala, Uganda.</p>
         </div>
-
         <div class="footer__2">
-          <h4>Permalinks</h4>
-          <ul class="permalinks">
+          <h4>Quick Links</h4>
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
         <div class="footer__3">
-          <h4>Privacy</h4>
-          <ul class="privacy">
+          <h4>Legal</h4>
+          <ul>
             <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms and Conditions</a></li>
-            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Code of Conduct</a></li>
           </ul>
         </div>
-
         <div class="footer__4">
-          <h4>Contact Us</h4>
-          <div>
+          <h4>Connect</h4>
+          <div class="contact-details">
             <p>+256-702 973946</p>
             <p>codersclub256@gmail.com</p>
+          </div>
+          <ul class="footer__socials">
+            <li><a href="#" aria-label="Facebook"><i class="uil uil-facebook-f"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="uil uil-instagram"></i></a></li>
+            <li><a href="#" aria-label="Twitter"><i class="uil uil-twitter"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a></li>
+            <li><a href="#" aria-label="GitHub"><i class="uil uil-github"></i></a></li>
+          </ul>
         </div>
-        <ul class="footer__socials">
-          <li>
-            <a href="#"
-              ><i class="uil uil-facebook-f"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#"
-              ><i class="uil uil-instagram"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#"
-              ><i class="uil uil-twitter"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#"
-              ><i class="uil uil-linkedin-alt"></i
-            ></a>
-          </li>
-        </ul>
-      </div>    
+      </div>
       <div class="footer__copyright">
-        <small>Copyright &copy; Coders Club. All Rights Reserved.</small>
+        <small>Copyright &copy; 2025 Coders Club. All Rights Reserved.</small>
       </div>
     </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+      <i class="uil uil-arrow-up"></i>
+    </button>
 
     <script src="./main.js"></script>
   </body>
