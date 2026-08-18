@@ -9,35 +9,53 @@ window.addEventListener('scroll', () => {
 const menu    = document.querySelector('.nav__menu');
 const openBtn = document.querySelector('#open-menu-btn');
 const closeBtn = document.querySelector('#close-menu-btn');
+const mobileNavQuery = window.matchMedia('(max-width: 1024px)');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (openBtn) {
-  openBtn.addEventListener('click', () => {
-    menu.classList.add('show');
-    closeBtn.style.display = 'inline-flex';
-    openBtn.style.display  = 'none';
-  });
+function setMenuState(isOpen, returnFocus = false) {
+  if (!menu || !openBtn || !closeBtn) return;
+
+  menu.classList.toggle('show', isOpen);
+  openBtn.setAttribute('aria-expanded', String(isOpen));
+  openBtn.style.display = isOpen ? 'none' : '';
+  closeBtn.style.display = isOpen ? 'inline-flex' : '';
+
+  if (isOpen) {
+    menu.querySelector('a')?.focus();
+  } else if (returnFocus) {
+    openBtn.focus();
+  }
 }
 
-if (closeBtn) {
-  closeBtn.addEventListener('click', () => {
-    menu.classList.remove('show');
-    closeBtn.style.display = 'none';
-    openBtn.style.display  = 'inline-flex';
+if (openBtn && menu && closeBtn) {
+  openBtn.addEventListener('click', () => setMenuState(true));
+  closeBtn.addEventListener('click', () => setMenuState(false, true));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu.classList.contains('show')) {
+      setMenuState(false, true);
+    }
   });
+
+  const resetNavState = () => {
+    if (!mobileNavQuery.matches) {
+      setMenuState(false);
+    }
+  };
+
+  mobileNavQuery.addEventListener('change', resetNavState);
 }
 
 // Close mobile menu when a link is clicked
 menu && menu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    menu.classList.remove('show');
-    if (closeBtn) closeBtn.style.display = 'none';
-    if (openBtn)  openBtn.style.display  = 'inline-flex';
+    setMenuState(false);
   });
 });
 
 /* ===== TYPING ANIMATION (hero only) ===== */
 const typedWordEl = document.getElementById('typed-word');
-if (typedWordEl) {
+if (typedWordEl && !prefersReducedMotion) {
   const words = ['code', 'Python', 'React', 'Flutter', 'innovation', 'you'];
   let wordIndex = 0;
   let charIndex = 0;
@@ -75,18 +93,22 @@ if (typedWordEl) {
 }
 
 /* ===== SCROLL REVEAL ===== */
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, i * 60);
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+if (prefersReducedMotion) {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+} else {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 60);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+}
 
 /* ===== ANIMATED COUNTERS ===== */
 function animateCounter(el) {
@@ -207,7 +229,7 @@ function handleScrollTop() {
 
 if (scrollTopBtn) {
   scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
   });
 }
 
@@ -216,6 +238,7 @@ if (window.scrollY > 50) nav.classList.add('scrolled');
 
 /* ===== HERO FLOATING PARTICLES ===== */
 (function spawnParticles() {
+  if (prefersReducedMotion) return;
   const hero = document.querySelector('header');
   if (!hero) return;
   const symbols = ['{}', '//', '=>', '</', '[]', '&&', '!=', '()', '++', '**', '0x', '::'];
