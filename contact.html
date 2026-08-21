@@ -27,15 +27,15 @@
           <img src="./images/CoderLogo.png" alt="Coders Club" class="nav__logo-img" />
           <span class="logo">CODERS CLUB</span>
         </a>
-        <ul class="nav__menu">
+        <ul class="nav__menu" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
         <a href="contact.html" class="nav__cta">Join Free →</a>
-        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
-        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        <button id="open-menu-btn" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn" type="button" aria-label="Close navigation menu"><i class="uil uil-multiply"></i></button>
       </div>
     </nav>
 
@@ -122,7 +122,7 @@
             </div>
             <button type="submit" class="btn-primary">Send Message</button>
           </form>
-          <div class="form__success" id="form-success">
+          <div class="form__success" id="form-success" role="status" aria-live="polite" tabindex="-1">
             <i class="uil uil-check-circle"></i>
             <h4>Message Sent!</h4>
             <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
